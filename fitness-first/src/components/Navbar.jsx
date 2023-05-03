@@ -1,9 +1,14 @@
 import React from 'react'
-
+import './Navbar.css'
+import Header from './Header/Header'
 const Navbar = () => {
   return (
-    <div>
-    <h1> Navbar</h1> 
+    <div className='nav-div1'>
+    {/* <h1> Navbar</h1>    */}
+    <div className='left-nav'>
+    <Header/>  
+     </div>
+    <div className='right-nav'>R </div>
     </div>
   )
 }
