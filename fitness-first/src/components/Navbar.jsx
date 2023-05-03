@@ -8,7 +8,10 @@ const Navbar = () => {
     <div className='left-nav'>
     <Header/>  
      </div>
-    <div className='right-nav'>R </div>
+    <div className='right-nav'>
+      <button>Login</button>
+      <button>Sin--</button>
+       </div>
     </div>
   )
 }

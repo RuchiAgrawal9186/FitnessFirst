@@ -7,4 +7,14 @@
      display: flex;
      gap: 2rem; 
      color: white;
+     cursor: pointer;
+}
+.header-menu>li:hover{
+color: orange;
+cursor: pointer;
+}
+
+.logo-img{
+width: 10rem;
+height: 3rem ;
 }
