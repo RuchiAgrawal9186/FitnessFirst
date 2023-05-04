@@ -1,6 +1,7 @@
 import './App.css';
 import MainRoutes from './Pages/MainRoutes';
 import Footer from './components/Footer';
+import Login from './components/Login';
 import Navbar from './components/Navbar';
 import { Link } from 'react-router-dom';
 
@@ -16,7 +17,7 @@ function App() {
       <Link style={{margin:"30px"}} to ='/signAndLogin'>SignUpLogin</Link>
       </div> */}
    
-      
+      {/* <Login/> */}
       <Navbar/>
       <MainRoutes/>
       <Footer/>
