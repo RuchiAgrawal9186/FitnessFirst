@@ -5,7 +5,7 @@ const Articals = () => {
   return (
     <div className="Articals_section">
         <p className='artical_title'> Articals</p>
-        <h1>Articlaes from tasking</h1>
+        <h1>Articlas from tasking</h1>
         <div className="artical_div"> 
             <div>
                 <img src="https://placehold.co/600x400/png" alt="" />

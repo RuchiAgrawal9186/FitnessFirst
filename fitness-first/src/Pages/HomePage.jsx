@@ -6,6 +6,15 @@ import hero_image from "../assets/hero_image.png"
 import hero_image_back from "../assets/hero_image_back.png"
 import Heart from "../assets/heart.png"
 import Calories from "../assets/calories.png"
+import Slider from '../components/Slider/Slider'
+import Articals from '../components/Articals/Articals'
+
+// fitness-first\src\assets\rightArrow.png
+// Programs Data
+import {programsData} from "../data/programsData"
+import RightArrow from "../assets/rightArrow.png"
+import Reason from '../components/Reasons/Reason'
+
 
 
 const HomePage = () => {
@@ -121,19 +130,39 @@ const HomePage = () => {
             <span>Programs</span>
             <span className='stroke-text'>toshape you</span>
           </div>
+
+          <div className="program-categories">
+            {
+              programsData.map((el)=>(
+                <div className="category">
+                  {el.image}
+                  <span>{el.heading}</span>
+                  <span>{el.details}</span>
+                  <div className="join-now">
+                    <span>Join Now</span>
+                    <img src={RightArrow} alt="" />
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+
+
+
+
+
+
+
+
+
         </div>
-
-
-
-
-
-
-
-
-
-
-
         {/* Programs */}
+
+        <Reason/>
+        {/* <Articals/>
+        <Slider/> */}
+
+
 
     </div>
   )
