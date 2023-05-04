@@ -1,18 +1,20 @@
 import axios from "axios";
 import { GET_PRODUCT_SUCCESS, PRODUCT_FAILURE, PRODUCT_REQUEST } from "./actionTypes";
 
-const URL =`http://localhost:${process.env.REACT_APP_JSON_SERVER_PORT}/products`
+const URL =`http://localhost:8080/products`
 
 export const getCards = (payload) =>(dispatch) => {
   // Write logic here
+  console.log('getCard')
   dispatch({type: PRODUCT_REQUEST})
-
+  console.log('getRww')
   axios.get(URL, {
-    params:payload
+    params:""
   }).then((res)=>{
     console.log(res.data)
     dispatch({type:GET_PRODUCT_SUCCESS, payload:res.data})
   }).catch(()=>{
+    console.log("err")
     dispatch({type:PRODUCT_FAILURE})
   })
 

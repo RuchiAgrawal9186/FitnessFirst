@@ -1,9 +1,10 @@
 import React from 'react'
+import CardList from '../components/CardList'
 
 const ProductPage = () => {
   return (
     <div>
-     <h1>ProductPage</h1> 
+      <CardList/>
     </div>
   )
 }
