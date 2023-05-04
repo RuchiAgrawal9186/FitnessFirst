@@ -1,0 +1,36 @@
+.slider_section{
+    background-color:black;
+    padding:3%;
+}
+.title{
+    color:#D68910;
+    font-size: large;
+}
+.h1_title
+{
+    color:white;
+}
+.image_div{
+    border: 1px solid white;
+    border-radius: 100%;
+    width:30%;
+    height:80px;
+    margin: auto;
+    margin-top: 3%;
+
+}
+.image_div >img{
+    width:100%;
+    border-radius:100%;
+    height:80px
+}
+.parag_div{
+    border:1px solid white;
+    width:90%;
+    margin:auto;
+    margin-top:5%;
+    height:170PX
+}
+.parag_div .desc{
+    font-size:16px
+}

@@ -1,0 +1,25 @@
+.Articals_section{
+    background-color:black;
+    color:white;
+    padding:2%;
+}
+.artical_title{
+    color: #D68910;
+    font-size: large;
+}
+.artical_div
+{
+    width:80%;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+.artical_div >div{
+    border:1px solid white;
+    padding:10px;
+}
+.artical_div >div >img{
+    width: 100%
+}
+
