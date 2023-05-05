@@ -8,10 +8,10 @@ const Navbar = () => {
     <div className='left-nav'>
     <Header/>  
      </div>
-    <div className='right-nav'>
+    {/* <div className='right-nav'>
       <button>Login</button>
       <button>Sin--</button>
-       </div>
+       </div> */}
     </div>
   )
 }
