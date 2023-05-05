@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react'
 import {  useDispatch, useSelector } from 'react-redux'
-import { getData } from '../Redux/DataReducer/action'
+import {getData} from '../Redux/DataReducer/action'
 import "./ProductPage.css"
 import SideBar from '../components/SideBar'
 import { useLocation, useSearchParams } from 'react-router-dom'
 
 const ProductPage = () => {
 
-  const gymData = useSelector((store)=> store.DataReducer.gymData)
+  const gymData = useSelector((store)=> store.dataReducer.gymData)
   const dispatch = useDispatch()
 
 

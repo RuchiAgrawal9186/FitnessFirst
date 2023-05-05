@@ -1,16 +1,13 @@
-import React from 'react'
+import React from "react";
+import Slider from "../components/Slider/Slider";
+import Articals from "../components/Articals/Articals";
 
-import "../CSS/Homepage.css"
 
-import hero_image from "../assets/hero_image.png"
-import hero_image_back from "../assets/hero_image_back.png"
-import Heart from "../assets/heart.png"
-import Calories from "../assets/calories.png"
-import Slider from '../components/Slider/Slider'
-import Articals from '../components/Articals/Articals'
+
 
 // fitness-first\src\assets\rightArrow.png
 // Programs Data
+
 import {programsData} from "../data/programsData"
 import RightArrow from "../assets/rightArrow.png"
 import Reason from '../components/Reasons/Reason'
@@ -20,6 +17,8 @@ import Testimonials from '../components/Testimonials/Testimonials'
 import {motion} from "framer-motion"
 
 
+import Reason from "../components/Reasons/Reason";
+import HomeMid from "../components/HomeMid";
 
 const HomePage = () => {
 
@@ -27,7 +26,13 @@ const HomePage = () => {
   const mobile = window.innerWidth<=768?true:false
 
   return (
-    <div>
+    <div
+      {/* Programs */}
+      
+      <Reason />
+      <Articals />
+      <Slider />
+
 
     
     <div className='hero'>
@@ -45,7 +50,7 @@ const HomePage = () => {
         
 
 
-{/* /////////////////// */}
+
 
         
 
@@ -186,13 +191,12 @@ const HomePage = () => {
 
         <Reason/>
         <Plan/>
-        {/* <Articals/>
-        <Slider/> */}
+        <Articals/>
+        <Slider/> 
         <Testimonials/>
 
-
     </div>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;
