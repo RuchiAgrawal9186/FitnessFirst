@@ -11,7 +11,7 @@ import BmiCalc from '../components/BmiCalc'
 
 const MainRoutes = () => {
   return (
-    <div>
+    <div >
       <Routes>
         <Route path='/' element={<HomePage/>}/>
         <Route path='/products' element={<ProductPage/>}/>

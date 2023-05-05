@@ -15,8 +15,6 @@ cursor: pointer;
 }
 
 .logo-img{
-width: 16rem;
-height: 13rem ;
 object-fit: cover;
 object-position: 25% 25%; 
 /* background-color: black; */
@@ -33,7 +31,7 @@ background-color: none;
 }
 
 .opacity{
-    opacity: 0.5;
+    opacity: 1;
 }
 
 .btn2{
