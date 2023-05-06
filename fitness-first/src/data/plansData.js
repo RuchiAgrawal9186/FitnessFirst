@@ -52,7 +52,7 @@ export const plansData = [
     price: "45",
     features: [
       "8 hours of excercises",
-      "Consultation of Private Coach",
+      "Private Coach",
       "Free Fitness Merchandises",
     ],
   },

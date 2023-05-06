@@ -15,6 +15,54 @@ cursor: pointer;
 }
 
 .logo-img{
-width: 10rem;
-height: 3rem ;
+object-fit: cover;
+object-position: 25% 25%; 
+/* background-color: black; */
+/* background-color: transparent; */
+background-color: none;
+/* background-image: -moz-linear-gradient(); */
+}
+
+.header{
+    
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.opacity{
+    opacity: 1;
+}
+
+.btn2{
+    width: 7rem;
+    height: 2rem;
+    /* cursor: pointer; */
+    font-size: large;
+    text-transform: uppercase;
+    background-color: var(--orange);
+    border: none;
+    font-weight: bold;
+
+}
+
+.btn2:hover{
+cursor: pointer;
+background-color: white;
+color: var(--orange);
+}
+
+
+@media screen and (max-width:768px) {
+    .header>:nth-child(2){
+        position: fixed;
+        right: 2rem;
+        z-index: 99;
+    }
+
+    .header-menu{
+        background-color: var(--appColor);
+        padding: 2rem;
+        flex-direction: column;
+    }
 }

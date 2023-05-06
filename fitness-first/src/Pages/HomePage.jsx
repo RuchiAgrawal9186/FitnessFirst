@@ -14,10 +14,18 @@ import Articals from '../components/Articals/Articals'
 import {programsData} from "../data/programsData"
 import RightArrow from "../assets/rightArrow.png"
 import Reason from '../components/Reasons/Reason'
+import Plan from '../components/Plans/Plan'
+import Testimonials from '../components/Testimonials/Testimonials'
+// import Plan from '../components/Plans/Plan'
+import {motion} from "framer-motion"
 
 
 
 const HomePage = () => {
+
+  const transition = {type:"spring",duration:3}
+  const mobile = window.innerWidth<=768?true:false
+
   return (
     <div>
 
@@ -25,7 +33,13 @@ const HomePage = () => {
     <div className='hero'>
         <div className="left">
         <div className="the-best-ad">
-          <div></div>
+          <motion.div
+          initial={{left:mobile?"165px":"238px"}}
+          whileInView = {{left:"8px"}}
+          transition = {{...transition,type:"tween"}}
+          >
+            
+          </motion.div>
           <span>the best fitness club in the town</span>
         </div>
         
@@ -97,25 +111,37 @@ const HomePage = () => {
         <div className="right">
           <button className='btn'>join Now</button>
 
-          <div className="heart-rate">
+          <motion.div className="heart-rate"
+          transition={transition}
+          whileInView={{right:"4rem"}}
+          initial={{right:"-6rem"}}
+          >
             <img src={Heart} alt="Heart" />
             <span>Heart Rate</span> <span>116 Bpm</span>
-          </div>
+          </motion.div>
 
           {/* images */}
 
           <img src={hero_image} alt=""className='hero-image' />
-          <img src={hero_image_back} className='hero-image-back'alt="" />
+          <motion.img src={hero_image_back}
+          initial={{right:"11rem"}}
+          whileInView={{right:"20rem"}}
+          transition={transition}
+          className='hero-image-back'alt="" />
 
 
-          <div className="calories">
+          <motion.div className="calories"
+          initial={{right:"37rem"}}
+          whileInView={{right:"28rem"}}
+          transition={transition}
+          >
             <img src={Calories} alt="" />
             <div>
 
             <span>Calories Burn</span>
             <span>220 kcal</span>
             </div>
-          </div>
+          </motion.div>
         </div>
         
         
@@ -159,9 +185,16 @@ const HomePage = () => {
         {/* Programs */}
 
         <Reason/>
+<<<<<<< HEAD
         <Articals/>
         <Slider/>
 
+=======
+        <Plan/>
+        {/* <Articals/>
+        <Slider/> */}
+        <Testimonials/>
+>>>>>>> 249a478c498d748fb885572bf14f8fe7bc5d04c4
 
 
     </div>
