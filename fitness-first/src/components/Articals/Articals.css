@@ -1,12 +1,13 @@
 .Articals_section{
-    background-color:black;
+    background-color:#464D53;
     color:white;
     padding:2%;
 }
 .artical_title{
     color: #D68910;
-    font-size: large;
+    font-size: 30px;
 }
+
 .artical_div
 {
     width:80%;
@@ -18,8 +19,11 @@
 .artical_div >div{
     border:1px solid white;
     padding:10px;
+    background-color: gray;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .artical_div >div >img{
-    width: 100%
+    width: 100%;
+    height:60%;
 }
 

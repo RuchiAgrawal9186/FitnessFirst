@@ -185,10 +185,16 @@ const HomePage = () => {
         {/* Programs */}
 
         <Reason/>
+
+        <Articals/>
+        <Slider/>
+
+
         <Plan/>
         {/* <Articals/>
         <Slider/> */}
         <Testimonials/>
+
 
 
     </div>

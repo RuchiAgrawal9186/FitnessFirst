@@ -93,13 +93,14 @@ const Login = () => {
   return (
     <>
     <ToastContainer theme="colored"></ToastContainer>
+    {/* <ToastContainer theme="colored"></ToastContainer> */}
     <Center>
         <Box border="1px solid black" w={{base:"30%", md:"30%",sm:"20%"}} height={{base:"400px",md:"400px",sm:"200px"}} margin="auto" marginTop="2%" boxShadow='dark-lg'>
             <h2 style={{fontFamily:"sans-serif",marginTop:"2%",textAlign:"center"}}>Login form</h2>
     <FormControl isRequired marginTop="4%" >
     
     <HStack></HStack>
-      <Input type='email' onChange={(e)=> setemail(e.target.value)} marginTop="3%"placeholder='Enter Email' w={{base:"50%",md:"60%",sm:"15%"}} border="1px solid black" name="email" id="email" value={email}/>
+      <Input type='email' onChange={(e)=> setemail(e.target.value)} marginTop="3%"placeholder='Enter Email' w={{base:"70%",md:"70%",sm:"15%"}} border="1px solid black" name="email" id="email" value={email}/>
      
       <Center>
        <InputGroup size='md' w={{base:"50%",md:"60%",sm:"15%"}} marginTop="5%" >
@@ -124,6 +125,37 @@ const Login = () => {
     </FormControl>
     </Box>
     </Center>
+    {/* <Center>
+        <Box border="1px solid black" w={{base:"60%", md:"60%",sm:"20%"}} height={{base:"800px",md:"800px",sm:"200px"}} margin="auto" marginTop="1%" boxShadow='dark-lg' padding="2%" backgroundColor="white">
+            <h2 style={{fontFamily:"sans-serif",marginTop:"2%",textAlign:"center"}}>Login form</h2>
+    <FormControl isRequired marginTop="4%" >
+    
+    <HStack></HStack>
+      <Input type='email' onChange={(e)=> setemail(e.target.value)} marginTop="3%"placeholder='Enter Email' w={{base:"80%",md:"80%",sm:"15%"}} border="1px solid black" name="email" id="email" value={email}/>
+     
+      <Center>
+       <InputGroup size='md' w={{base:"50%",md:"60%",sm:"15%"}} marginTop="5%" >
+      <Input
+        pr='4.5rem'
+        type={show ? 'text' : 'password'}
+        placeholder='Enter password'
+        border="1px solid black"
+        name="password"
+        value={password}
+        onChange={(e)=> setpassword(e.target.value)}
+        id="password"/>
+      <InputRightElement width='4.5rem'>
+        <Button h='1.75rem' size='sm' onClick={handleClick} backgroundColor="black" color="white">
+          {show ? 'Hide' : 'Show'}
+        </Button>
+      </InputRightElement>
+    </InputGroup>
+    </Center>
+    <Input type="submit" value="Login" onClick={handlesubmit} backgroundColor="black" color="white" w={{base:"50%",md:"60%",sm:"15%"}} marginTop="5%" paddin="5%"></Input>
+    <Text marginTop="2%">if you are new user? then click here<Link to="/register" style={{color:"blue"}}> Register</Link></Text>
+    </FormControl>
+    </Box>
+    </Center> */}
     </>
 
   )
