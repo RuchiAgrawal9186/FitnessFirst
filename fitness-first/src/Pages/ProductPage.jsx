@@ -3,11 +3,12 @@ import {  useDispatch, useSelector } from 'react-redux'
 import { getData } from '../Redux/DataReducer/action'
 import "./ProductPage.css"
 import SideBar from '../components/SideBar'
-import { useLocation, useSearchParams } from 'react-router-dom'
+import { NavLink, useLocation, useSearchParams } from 'react-router-dom'
 
 const ProductPage = () => {
 
   const gymData = useSelector((store)=> store.DataReducer.gymData)
+  const isLoading = useSelector((store)=> store.DataReducer.isLoading)
   const dispatch = useDispatch()
 
 
@@ -35,13 +36,6 @@ let obj = {
   },[location.search])
 
 
-
-
-
-  // useEffect(()=>{
-  //  dispatch(getData())
-  // },[])
-
   return (
     <div className='productPage_section'>
 
@@ -53,10 +47,14 @@ let obj = {
             {/* <h1>ProductPage</h1>  */}
             {/* <h1>exercise Types</h1> */}
             {
-              gymData.map((el)=>{
+              isLoading ? <h1>Loading...</h1> : gymData.map((el)=>{
                 return <div key={el.id}>
                   <img src={el.image} alt="altimages" />
-                  <p>{el.exercise}</p>
+                  <p>exercise :{el.exercise}</p>
+                  <p>category : {el.category}</p>
+                  {/* <p>trainer : {el.gh-name}</p> */}
+                  <p>price: ₹{el.price}</p>
+                  <NavLink to={`/products/${el.id}`}><p>Read More Details....</p></NavLink>
                 </div>
               })
             }

@@ -1,5 +1,5 @@
 import axios from "axios";
-import { GET_PRODUCT_SUCCESS, PRODUCT_FAILURE, PRODUCT_REQUEST } from "./actionTypes";
+import { GET_ONE_PRODUCT_SUCCESS, GET_PRODUCT_SUCCESS, PRODUCT_FAILURE, PRODUCT_REQUEST } from "./actionTypes";
 
 // const URL =`http://localhost:${process.env.REACT_APP_JSON_SERVER_PORT}/products`
 
@@ -21,4 +21,21 @@ export const editCard =(data)=> (dispatch) => {
   // Write logic here
  
 };
+
+export const getSigledata = (id) => (dispatch) =>{
+
+  dispatch({type:PRODUCT_REQUEST})
+  axios.get(`https://zara-vej9.onrender.com/gymproducts/${id}`)
+  .then((res)=>{
+    console.log(res.data)
+    let arr = []
+    arr.push(res.data)
+    dispatch({type:GET_ONE_PRODUCT_SUCCESS,payload:arr})
+  })
+  .catch((err)=>{
+    console.log(err)
+    dispatch({type:PRODUCT_FAILURE})
+  })
+
+}
 

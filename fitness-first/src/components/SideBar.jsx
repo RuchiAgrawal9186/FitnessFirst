@@ -84,12 +84,12 @@ const Sidebar = () => {
 
     <h3>Filter by Category</h3>
     <div>
-        <input type="checkbox" value={"top-wear"} onChange={handleCategory} checked={category.includes("top-wear")}/>
-        <label>Top were</label>
+        <input type="checkbox" value={"Stretch"} onChange={handleCategory} checked={category.includes("Stretch")}/>
+        <label>Stretch</label>
     </div>
     <div>
-        <input type="checkbox" value={"bottom-wear"} onChange={handleCategory} checked={category.includes("bottom-wear")}/>
-        <label>Bottom were</label>
+        <input type="checkbox" value={"strength"} onChange={handleCategory} checked={category.includes("strength")}/>
+        <label>strength</label>
     </div>
     <div>
         <input type="checkbox" value={"shoes"} onChange={handleCategory} checked={category.includes("shoes")}/>

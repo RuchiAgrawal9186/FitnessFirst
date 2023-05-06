@@ -159,8 +159,8 @@ const HomePage = () => {
         {/* Programs */}
 
         <Reason/>
-        {/* <Articals/>
-        <Slider/> */}
+        <Articals/>
+        <Slider/>
 
 
 
