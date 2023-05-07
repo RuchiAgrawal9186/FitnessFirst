@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Card from "./Card";
-import styled from "styled-components";
 import { getData } from "../Redux/DataReducer/action";
 import { useLocation, useSearchParams } from "react-router-dom";
 import Spinner from "./spinner/Spinner";
@@ -11,13 +10,11 @@ const ProductList = () => {
   const isLoading= useSelector((state) => state.dataReducer.isLoading);
   const [searchParams] = useSearchParams();
   const dispatch = useDispatch();
-  // console.log(searchParams.getAll("gender"))
 
   const location = useLocation();
 
   useEffect(() => {
     let params = {
-      // gender:searchParams.getAll("gender"),
       category: searchParams.getAll("category"),
       _sort: searchParams.get("order") && "price",
       _order: searchParams.get("order"),

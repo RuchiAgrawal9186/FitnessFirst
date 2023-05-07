@@ -5,7 +5,7 @@ import "../index.css"
 
 const Footer = () => {
   return (
-    <footer className="bg-white">
+    <footer className="bg-orange-200 shadow-inner">
         <div className="container page-padding py-[10rem]">
           {/* footer div all */}
           <div className="flex justify-between min620:flex-col min620:items-center min620:text-center min620:gap-[5rem] !text-left">

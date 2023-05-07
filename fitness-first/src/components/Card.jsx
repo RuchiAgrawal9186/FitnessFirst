@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const Card = ({ image, exercise, category, instructions, price, id }) => {
   return (
-    <div className="relative flex  flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+    <div className="relative flex mt-[5%]  flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
       <div class="relative mx-4  h-56 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40">
         <img src={image} alt="img-blur-shadow" layout="fill" />
       </div>
@@ -29,7 +29,7 @@ const Card = ({ image, exercise, category, instructions, price, id }) => {
             type="button"
             data-ripple-light="true"
           >
-            Enroll Now
+            Full Details
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

@@ -11,16 +11,10 @@ import Navbar from './components/Navbar';
 function App() {
   return (
     <div className="App">
-      {/* delete this when you will have created a navbar
-      <div>
-      <Link style={{margin:"30px"}} to ='/'>home</Link>
-      <Link style={{margin:"30px"}} to ='/products'>Products</Link>
-      <Link style={{margin:"30px"}} to ='/signAndLogin'>SignUpLogin</Link>
-      </div> */}
-   
-      {/* <Login/> */}
       <Navbar/>
+      <div className='mt-[4%]'>
       <MainRoutes/>
+      </div>
       <Footer/>
     </div>
   );

@@ -21,6 +21,26 @@ export const getData = (payload) =>(dispatch) => {
 };
 
 
+const USER =` http://localhost:8080/users`
+
+export const getUsers = (payload) =>(dispatch) => {
+  // Write logic here
+  
+  dispatch({type: PRODUCT_REQUEST})
+  console.log('getRww')
+  return axios.get(USER, {
+    params:payload
+  }).then((res)=>{
+    console.log(res.data)
+    dispatch({type:GET_PRODUCT_SUCCESS, payload:res.data})
+  }).catch(()=>{
+    console.log("err")
+    dispatch({type:PRODUCT_FAILURE})
+  })
+
+};
+
+
 export const getSingleData =(payload)=> (dispatch) =>{
   dispatch({type: PRODUCT_REQUEST})
 

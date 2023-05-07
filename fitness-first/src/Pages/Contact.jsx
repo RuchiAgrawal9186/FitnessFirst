@@ -3,7 +3,7 @@ import "../index.css"
 function Contact() {
     return (
       <>
-        <section className="">
+        <section className="mt-[18%]">
           <div className="login-banner relative justify-center flex">
             <h1 className="text-white absolute bottom-[25px] text-[3rem] font-bold">
               Contact Us

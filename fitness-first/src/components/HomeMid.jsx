@@ -11,7 +11,7 @@ import RightArrow from "../assets/rightArrow.png";
 const HomeMid = () => {
   return (
     <div>
-       <div className="hero">
+       <div className="hero mt-[5%]">
         <div className="left">
           <div className="the-best-ad">
             <div></div>

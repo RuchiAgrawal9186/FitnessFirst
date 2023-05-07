@@ -30,7 +30,7 @@ const HomePage = () => {
     <div>
 
     
-    <div className='hero'>
+    <div className='hero mt-[8%]'>
         <div className="left">
         <div className="the-best-ad">
           <motion.div

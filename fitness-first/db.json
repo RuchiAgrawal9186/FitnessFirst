@@ -1,9 +1,83 @@
 {
-  "Products": [
+  "users": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "id": "michael.lawson@reqres.in",
+      "email": "michael.lawson@reqres.in",
+      "first_name": "Michael",
+      "last_name": "Lawson",
+      "avatar": "https://reqres.in/img/faces/7-image.jpg",
+      "category": "premium",
+      "charge": 30,
+      "password": "12345678"
+    },
+    {
+      "id": "lindsay.ferguson@reqres.in",
+      "email": "lindsay.ferguson@reqres.in",
+      "first_name": "Lindsay",
+      "last_name": "Ferguson",
+      "avatar": "https://reqres.in/img/faces/8-image.jpg",
+      "category": "pro",
+      "charge": 45,
+      "password": "12345678"
+    },
+    {
+      "id": "obias.funke@reqres.in",
+      "email": "tobias.funke@reqres.in",
+      "first_name": "Tobias",
+      "last_name": "Funke",
+      "avatar": "https://reqres.in/img/faces/9-image.jpg",
+      "category": "pro",
+      "charge": 45,
+      "password": "12345678"
+    },
+    {
+      "id": "byron.fields@reqres.in",
+      "email": "byron.fields@reqres.in",
+      "first_name": "Byron",
+      "last_name": "Fields",
+      "avatar": "https://reqres.in/img/faces/10-image.jpg",
+      "category": "basic",
+      "charge": 25,
+      "password": "12345678"
+    },
+    {
+      "id": "george.edwards@reqres.in",
+      "email": "george.edwards@reqres.in",
+      "first_name": "George",
+      "last_name": "Edwards",
+      "avatar": "https://reqres.in/img/faces/11-image.jpg",
+      "category": "basic",
+      "charge": 25,
+      "password": "12345678"
+    },
+    {
+      "id": "rachel.howell@reqres.in",
+      "email": "rachel.howell@reqres.in",
+      "first_name": "Rachel",
+      "last_name": "Howell",
+      "avatar": "https://reqres.in/img/faces/12-image.jpg",
+      "category": "premium",
+      "charge": 30,
+      "password": "12345678"
+    },
+    {
+      "email": "a@123",
+      "first_name": "Ashish ",
+      "last_name": "NANGARE",
+      "avatar": "https://reqres.in/img/faces/7-image.jpg",
+      "category": "premium",
+      "charge": 30,
+      "password": "aaa",
+      "id": "a@123"
+    },
+    {
+      "id": "v-GUsQJ"
+    },
+    {
+      "id": "ZM-i8TE"
+    },
+    {
+      "id": "WdFbQ1N"
     }
   ]
 }

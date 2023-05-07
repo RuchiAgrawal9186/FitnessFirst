@@ -19,18 +19,19 @@ const SingleCardPage = () => {
   // const {exercise,instructions,videoLink,image,price,category} = gymData
   // console.log(exercise)
   return (
-    <div className="bg-black-1000">
+    <div className="bg-grey-600 mt-[8%]">
       
       <div
         key={el.id}
-        className="singlepage_Section"
-        style={{ width: "50%", margin: "auto", justifyContent: "center" }}
+        className="singlepage_Section rounded-xl "
+        
+        style={{ width: "50%", margin: "auto", justifyContent: "center", backgroundColor:"grey" }}
       >
-        <h1>exercise details</h1>
+        <h1 className="text-3xl text-orange-500 font-bold mb-4">Exercise Details</h1>
 
         <ReactPlayer url={el.videoLink} controls={true} />
 
-        <div className="single_product_main_div">
+        <div className="single_product_main_div grey-300">
           <div className="single_product_left_div">
             <img src={el.image} alt="altimage" />
           </div>

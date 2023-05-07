@@ -12,7 +12,7 @@ import Mountain from "../images/AboutPage/mountain.png";
 function About() {
   return (
     <>
-      <section className="login-section w-[60%] m-auto">
+      <section className="login-section w-[60%] m-auto mt-[8%]">
         <div className="login-banner relative justify-center flex">
           <h1 className="text-white absolute bottom-[25px] text-[3rem] font-bold">
             About Us
