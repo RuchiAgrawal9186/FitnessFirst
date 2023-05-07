@@ -31,16 +31,16 @@ const Sidebar = () => {
     setSearchParams(params);
   }, [gender, category, order,page]);
 
-  const handleGender = (e) => {
-    const { value } = e.target;
-    let newGender = [...gender];
-    if (newGender.includes(value)) {
-      newGender = newGender.filter((el) => el !== value);
-    } else {
-      newGender.push(value);
-    }
-    selectGender(newGender);
-  };
+  // const handleGender = (e) => {
+  //   const { value } = e.target;
+  //   let newGender = [...gender];
+  //   if (newGender.includes(value)) {
+  //     newGender = newGender.filter((el) => el !== value);
+  //   } else {
+  //     newGender.push(value);
+  //   }
+  //   selectGender(newGender);
+  // };
 
   const handleCategory = (e) => {
     const { value } = e.target;
@@ -54,62 +54,59 @@ const Sidebar = () => {
   };
 
 
-<<<<<<< HEAD
-        setOrder(value)
-    }
 
-  return (
-    <div>
-    <h3>Filter by Gender</h3>
-    <div>
-        <input type="checkbox" value={"male"}onChange={handleGender} checked={gender.includes("male")}/>
-        <label>Men</label>
-    </div>
-    <div>
-        <input type="checkbox" value={"female"}onChange={handleGender} checked={gender.includes("female")}/>
-        <label>woman</label>
-    </div>
-    <div>
-        <input type="checkbox" value={"kids"}onChange={handleGender} checked={gender.includes("kids")}/>
-        <label>kids</label>
-    </div>
-    <br/>
+       
 
-    <h3>Filter by Category</h3>
-    <div>
-        <input type="checkbox" value={"Stretch"} onChange={handleCategory} checked={category.includes("Stretch")}/>
-        <label>Stretch</label>
-    </div>
-    <div>
-        <input type="checkbox" value={"strength"} onChange={handleCategory} checked={category.includes("strength")}/>
-        <label>strength</label>
-    </div>
-    <div>
-        <input type="checkbox" value={"shoes"} onChange={handleCategory} checked={category.includes("shoes")}/>
-        <label>shoes</label>
-    </div>
-    <br/>
+  // return (
+  //   <div>
+  //   {/* <h3>Filter by Gender</h3>
+  //   <div>
+  //       <input type="checkbox" value={"male"}onChange={handleGender} checked={gender.includes("male")}/>
+  //       <label>Men</label>
+  //   </div>
+  //   <div>
+  //       <input type="checkbox" value={"female"}onChange={handleGender} checked={gender.includes("female")}/>
+  //       <label>woman</label>
+  //   </div>
+  //   <div>
+  //       <input type="checkbox" value={"kids"}onChange={handleGender} checked={gender.includes("kids")}/>
+  //       <label>kids</label>
+  //   </div>
+  //   <br/> */}
 
-    <h3>sort by price</h3>
-    <div onChange={handleSort}>
-        <input type="radio" name="order" value={"asc"} defaultChecked={order==="asc"}/>
-        <label>Ascending</label>
-        <input type="radio" name="order" value={"desc"} defaultChecked={order==="desc"}/>
-        <label>Descending</label>
-    </div>
+  //   <h3>Filter by Category</h3>
+  //   <div>
+  //       <input type="checkbox" value={"Stretch"} onChange={handleCategory} checked={category.includes("Stretch")}/>
+  //       <label>Stretch</label>
+  //   </div>
+  //   <div>
+  //       <input type="checkbox" value={"strength"} onChange={handleCategory} checked={category.includes("strength")}/>
+  //       <label>strength</label>
+  //   </div>
+  //   {/* <div>
+  //       <input type="checkbox" value={"shoes"} onChange={handleCategory} checked={category.includes("shoes")}/>
+  //       <label>shoes</label>
+  //   </div> */}
+  //   <br/>
 
-    <br/>
+  //   <h3>sort by price</h3>
+  //   <div onChange={handleSort}>
+  //       <input type="radio" name="order" value={"asc"} defaultChecked={order==="asc"}/>
+  //       <label>Ascending</label>
+  //       <input type="radio" name="order" value={"desc"} defaultChecked={order==="desc"}/>
+  //       <label>Descending</label>
+  //   </div>
 
-   <h3>page no {page}</h3>
-    <button onClick={() => setpage(page-1)}>prev</button>
-    <button onClick={() => setpage(page+1)}>next</button>    
-    </div>
-  )
-=======
+  //   <br/>
+
+  //  <h3>page no {page}</h3>
+  //   <button onClick={() => setpage(page-1)}>prev</button>
+  //   <button onClick={() => setpage(page+1)}>next</button>    
+  //   </div>
+  // )
   const handleOrder = (e)=>{
 const {value} = e.target
 setOrder(value)
->>>>>>> 249a478c498d748fb885572bf14f8fe7bc5d04c4
 }
 
  const handleNext = ()=>{
@@ -123,7 +120,7 @@ setOrder(value)
  return (
     <div>
       <h3>Filter</h3>
-      <div>
+      {/* <div>
         <input
           value={"female"}
           onChange={handleGender}
@@ -149,7 +146,7 @@ setOrder(value)
           checked={gender.includes("kids")}
         ></input>
         <label>Kids</label>
-      </div>
+      </div> */}
       <br />
       <br />
       <h3>Filter By Category</h3>
@@ -201,6 +198,6 @@ setOrder(value)
       </div>
     </div>
   );
-};
+    }
 
 export default Sidebar;

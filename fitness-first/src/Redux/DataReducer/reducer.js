@@ -4,25 +4,21 @@ import { GET_ONE_PRODUCT_SUCCESS, GET_PRODUCT_SUCCESS, PRODUCT_FAILURE, PRODUCT_
 const initialState = {
     isLoading: false,
     isError: false,
-<<<<<<< HEAD
+
     gymData: [],
-    siglepageData: []
-=======
+    siglepageData: [],
     products: [],
->>>>>>> 249a478c498d748fb885572bf14f8fe7bc5d04c4
   }
 export const reducer = (state = initialState, {type, payload})=>{
     // console.log(payload)
 switch(type){
     case PRODUCT_REQUEST : return {...state, isLoading:true}
-<<<<<<< HEAD
+
     case GET_PRODUCT_SUCCESS : return {...state, isError:false, isLoading:false, gymData:payload}
     case PRODUCT_FAILURE : return {...state, isError:true}
     case GET_ONE_PRODUCT_SUCCESS : return {...state, isError:false, isLoading:false, siglepageData:payload}
-=======
     case GET_PRODUCT_SUCCESS : return {...state, isError:false, isLoading:false, products:payload}
     case PRODUCT_FAILURE : return {...state, isError:false}
->>>>>>> 249a478c498d748fb885572bf14f8fe7bc5d04c4
     default: return state
 }
 }

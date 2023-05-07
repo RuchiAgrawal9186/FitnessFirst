@@ -185,16 +185,16 @@ const HomePage = () => {
         {/* Programs */}
 
         <Reason/>
-<<<<<<< HEAD
+
         <Articals/>
         <Slider/>
 
-=======
+
         <Plan/>
         {/* <Articals/>
         <Slider/> */}
         <Testimonials/>
->>>>>>> 249a478c498d748fb885572bf14f8fe7bc5d04c4
+
 
 
     </div>

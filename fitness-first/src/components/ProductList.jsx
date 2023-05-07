@@ -7,8 +7,8 @@ import { useLocation, useSearchParams } from "react-router-dom";
 import Spinner from "./spinner/Spinner";
 
 const ProductList = () => {
-  const products = useSelector((state) => state.dataReducer.products);
-  const isLoading= useSelector((state) => state.dataReducer.isLoading);
+  const products = useSelector((store) => store.dataReducer.products);
+  const isLoading= useSelector((store) => store.dataReducer.isLoading);
   const [searchParams] = useSearchParams();
   const dispatch = useDispatch();
   // console.log(searchParams.getAll("gender"))
