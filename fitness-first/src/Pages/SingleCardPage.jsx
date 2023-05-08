@@ -68,48 +68,4 @@ const SingleCardPage = () => {
 
 export default SingleCardPage;
 
-// category
-// :
-// "strength"
-// exercise
-// :
-// "Lunges"
-// gh-name
-// :
-// "gabrysia694     "
-// id
-// :
-// 4
-// image
-// :
-// "https://www.burnthefatinnercircle.com/members/images/2015.png?cb=20230213043730"
-// instructions
-// :
-// Array(4)
-// 0
-// :
-// "Stand with your feet hip-width apart and your hands on your hips."
-// 1
-// :
-// "Take a big step forward with your right foot, lowering your body until your right thigh is parallel to the floor."
-// 2
-// :
-// "Keep your left foot in place and your left knee hovering just above the ground."
-// 3
-// :
-// "Push back up to the starting position and repeat on the other side, stepping forward with your left foot."
-// length
-// :
-// 4
-// [[Prototype]]
-// :
-// Array(0)
-// price
-// :
-// 300
-// videoLink
-// :
-// "https://www.youtube.com/watch?v=3XDriUn0udo&t=10s"
-// [[Prototype]]
-// :
-// Object
+

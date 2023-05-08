@@ -54,24 +54,3 @@ const Card = ({ image, exercise, category, instructions, price, id }) => {
 
 export default Card;
 
-// category
-// :
-// "Stretch"
-// exercise
-// :
-// "Bicep Curl"
-// gh-name
-// :
-// "druvkotwani"
-// id
-// :
-// 1
-// image
-// :
-// "https://www.inspireusafoundation.org/wp-content/uploads/2023/01/inner-bicep-curl.gif"
-// instructions
-// :
-// (5) ['Stand with feet about hip-width apart, with your a…vy dumbells/barbell with your palm facing foward.', 'Squeeze your biceps and bend the arms, curling the weights towards the shoulders.', 'Do this while keeping the elbows stationary and only bringing the weight as high as you can.', 'Now lowly lower the weights, keeping a slight bend in the elbows at the bottom.', 'Repeat this for 2-3 sets for 10-12 reps.']
-// price
-// :
-// 334
