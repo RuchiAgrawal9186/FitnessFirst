@@ -61,7 +61,7 @@ function About() {
               <img src={GirlWind} alt="bg-wind" className="girl-wind" />
             </div>
           </div>
-          {/*  */}
+
           <div className="mt-[10rem]">
             <div className="grid grid-cols-2 grid-rows-2 w-full min620:grid-cols-1">
               <div className="w-full bg-white h-[43rem] flex flex-col justify-center items-center text-center px-[100px] min800:px-[10px]">
@@ -73,7 +73,7 @@ function About() {
                   Exercitation veniam consequat.
                 </p>
               </div>
-              {/*  */}
+
               <div className="w-full bg-white h-[43rem]">
                 <img
                   src={Img3}
@@ -81,7 +81,6 @@ function About() {
                   className="w-full h-full object-cover bg-center"
                 />
               </div>
-              {/*  */}
               <div className="w-full bg-white h-[43rem]">
                 <img
                   src={Img4}

@@ -5,32 +5,27 @@ const Sidebar = () => {
   const [searchParams, setSearchParams] = useSearchParams();
 
   const initialCategory = searchParams.getAll("category");
-  
+
   const [category, selectCategory] = useState(initialCategory || []);
 
-  const initialOrder = searchParams.get("order")
-  const [order, setOrder]= useState(initialOrder ||'')
+  const initialOrder = searchParams.get("order");
+  const [order, setOrder] = useState(initialOrder || "");
 
   const initialLimit = searchParams.get("limit");
-  const [limit, setLimit]  = useState(initialLimit || 6)
+  const [limit, setLimit] = useState(initialLimit || 6);
 
   const initialPage = searchParams.get("page");
-  const [page, setPage]  = useState(initialPage || 1)
-
-
+  const [page, setPage] = useState(initialPage || 1);
 
   useEffect(() => {
     let params = {
-  
       category,
     };
-    order && (params.order =order)
-    page && (params.page=page)
-    limit && (params.limit=limit)
+    order && (params.order = order);
+    page && (params.page = page);
+    limit && (params.limit = limit);
     setSearchParams(params);
-  }, [ category, order,page]);
-
-
+  }, [category, order, page]);
 
   const handleCategory = (e) => {
     const { value } = e.target;
@@ -43,21 +38,19 @@ const Sidebar = () => {
     selectCategory(newCategory);
   };
 
+  const handleOrder = (e) => {
+    const { value } = e.target;
+    setOrder(value);
+  };
 
-  const handleOrder = (e)=>{
-const {value} = e.target
-setOrder(value)
-}
+  const handleNext = () => {
+    setPage((p) => p + 1);
+  };
+  const handlePrev = () => {
+    setPage((p) => p - 1);
+  };
 
- const handleNext = ()=>{
-    setPage(p=>p+1)
-  }
-  const handlePrev = ()=>{
-    setPage(p=>p-1)
-  }
-
-
- return (
+  return (
     <div className="flex flex-col justify-start items-start pt-4 pl-2 bg-zinc-400 h-full rounded-3xl">
       <h3>Filter By Category</h3>
       <div>
@@ -84,20 +77,35 @@ setOrder(value)
         <h3>Sort By Price</h3>
       </div>
       <div className="flex flex-col">
-        <div  onChange={handleOrder}>
-          <input name="sort" type="radio" id="asc" value={'asc'} defaultChecked={order==="asc"} />
+        <div onChange={handleOrder}>
+          <input
+            name="sort"
+            type="radio"
+            id="asc"
+            value={"asc"}
+            defaultChecked={order === "asc"}
+          />
           <label htmlFor="asc">Ascending</label>
         </div>
         <div onChange={handleOrder}>
-          <input type="radio" name="sort" id="desc" value={'desc'} defaultChecked={order==="desc"} />
+          <input
+            type="radio"
+            name="sort"
+            id="desc"
+            value={"desc"}
+            defaultChecked={order === "desc"}
+          />
           <label htmlFor="desc">descending</label>
         </div>
       </div>
       <div className="flex">
-        <button disabled={page<=1} onClick={handlePrev}>Prev</button>
+        <button disabled={page <= 1} onClick={handlePrev}>
+          Prev
+        </button>
         <h3>{page}</h3>
-        <button disabled={page>=4} onClick={handleNext}>Next</button>
-
+        <button disabled={page >= 4} onClick={handleNext}>
+          Next
+        </button>
       </div>
       <br />
     </div>

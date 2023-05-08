@@ -1,11 +1,11 @@
-import React from 'react'
-import { Register } from '../components/Register'
+import React from "react";
+import { Register } from "../components/Register";
 const Sign = () => {
   return (
     <div>
-      <Register/>
+      <Register />
     </div>
-  )
-}
+  );
+};
 
-export default Sign
+export default Sign;

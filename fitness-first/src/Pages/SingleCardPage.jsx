@@ -9,25 +9,26 @@ import { getSingleData } from "../Redux/DataReducer/action";
 const SingleCardPage = () => {
   const { id } = useParams();
   const el = useSelector((store) => store.dataReducer.products);
-  // const isLoading = useSelector((store)=> store.DataReducer.isLoading)
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getSingleData(id));
   }, []);
-  // console.log("gymdata",gymData)
-  // const {exercise,instructions,videoLink,image,price,category} = gymData
-  // console.log(exercise)
   return (
     <div className="bg-grey-600 mt-[8%]">
-      
       <div
         key={el.id}
         className="singlepage_Section rounded-xl "
-        
-        style={{ width: "50%", margin: "auto", justifyContent: "center", backgroundColor:"grey" }}
+        style={{
+          width: "50%",
+          margin: "auto",
+          justifyContent: "center",
+          backgroundColor: "grey",
+        }}
       >
-        <h1 className="text-3xl text-orange-500 font-bold mb-4">Exercise Details</h1>
+        <h1 className="text-3xl text-orange-500 font-bold mb-4">
+          Exercise Details
+        </h1>
 
         <ReactPlayer url={el.videoLink} controls={true} />
 
@@ -38,27 +39,26 @@ const SingleCardPage = () => {
 
           <div className="single_product_right_div">
             <h2>exercise:{el.exercise}</h2>
-            {/* <p>{rating} (50 customer reviews)</p> */}
-            {/* <p>reviews</p> */}
-            {/* <p>Rating : <b><span>{rate}.0</span></b></p> */}
             <b>
               <del>MRP ₹{el.price + 4599}</del>
             </b>
             <p style={{ color: "white" }}>price:{el.price}</p>
-            {el.instructions && <ol className="text-left list-decimal">{el.instructions.map(al => <li> {al}</li>)}</ol>}
+            {el.instructions && (
+              <ol className="text-left list-decimal">
+                {el.instructions.map((al) => (
+                  <li> {al}</li>
+                ))}
+              </ol>
+            )}
             <div>
-              {/* <b><p>Available: <span>In Stock</span></p></b> */}
               <b>
                 <p>Categoty : {el.category}</p>
               </b>
-              {/* <b> <p>Color : {color}</p></b> */}
             </div>
             <b>
               {" "}
               <hr style={{ color: "black" }} />
             </b>
-
-            {/* <button className='button' onClick={()=> getcart(arr)}> Add to Cart</button> */}
           </div>
         </div>
       </div>

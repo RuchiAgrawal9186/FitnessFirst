@@ -28,8 +28,6 @@ const MainRoutes = ( ) => {
         <Route path='/bmi' element = {<PrivateRoutes><BmiCalc/></PrivateRoutes> }/>
         <Route path='/admin' element = {<PrivateRoutes><Admin/></PrivateRoutes>}>
         <Route index element={<Users/>} />
-          <Route path="trainer" element={<Trainers />} />
-          {/* <Route path="account" element={<Amount />} /> */}
         </Route>
       </Routes>
     </div>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 import hero_image from "../assets/hero_image.png";
 import hero_image_back from "../assets/hero_image_back.png";
@@ -11,7 +11,7 @@ import RightArrow from "../assets/rightArrow.png";
 const HomeMid = () => {
   return (
     <div>
-       <div className="hero mt-[5%]">
+      <div className="hero mt-[5%]">
         <div className="left">
           <div className="the-best-ad">
             <div></div>
@@ -111,7 +111,7 @@ const HomeMid = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default HomeMid
+export default HomeMid;

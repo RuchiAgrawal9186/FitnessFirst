@@ -41,16 +41,6 @@
       "password": "12345678"
     },
     {
-      "id": "george.edwards@reqres.in",
-      "email": "george.edwards@reqres.in",
-      "first_name": "George",
-      "last_name": "Edwards",
-      "avatar": "https://reqres.in/img/faces/11-image.jpg",
-      "category": "basic",
-      "charge": 25,
-      "password": "12345678"
-    },
-    {
       "id": "rachel.howell@reqres.in",
       "email": "rachel.howell@reqres.in",
       "first_name": "Rachel",
@@ -69,15 +59,6 @@
       "charge": 30,
       "password": "aaa",
       "id": "a@123"
-    },
-    {
-      "id": "v-GUsQJ"
-    },
-    {
-      "id": "ZM-i8TE"
-    },
-    {
-      "id": "WdFbQ1N"
     }
   ]
 }

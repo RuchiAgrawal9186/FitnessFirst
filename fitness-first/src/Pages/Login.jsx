@@ -2,78 +2,67 @@ import React from "react";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
-
-
-// import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 import { useDispatch } from "react-redux";
-import { LOGIN_SUCCESS } from "../Redux/AuthReducer/actionTypes";
 import axios from "axios";
 import { login } from "../Redux/AuthReducer/action";
 
-
 const Login = () => {
-  const auth = useSelector((state) => state.authReducer.isAuth)
-  const navigate= useNavigate()
-  const location = useLocation()
- 
+  const auth = useSelector((state) => state.authReducer.isAuth);
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const dispatch = useDispatch();
 
-  const[data, setData] = useState(
-    {email:"", password:""}
-)
+  const [data, setData] = useState({ email: "", password: "" });
 
-
-const handleChange = (e) => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
     setData({
       ...data,
-      [name]: value
+      [name]: value,
     });
   };
-//   console.log(data)
- 
 
   const handlesubmit = (e) => {
     e.preventDefault();
 
-    if(data.email==='admin@gmail.com' && data.password=='admin'){
-        toast.success("Admin has logged in")
-        navigate('/admin');
-        dispatch(login()).then(()=> {
-          navigate(location.state)})
-        return
-    }
-    
-    const getuserData = ()=>{
-        return axios.get(`http://localhost:8080/users/${data.email}`).then((res)=>{
-          
+    if (data.email === "admin@gmail.com" && data.password == "admin") {
+      toast.success("Admin has logged in");
+      navigate("/admin");
+      dispatch(dispatch({ type: "ADMIN" }));
 
-      if(res.data.email==data.email){
-        if(res.data.password==data.password){
-          toast.success("you are successfully logged in")
-           dispatch(login()).then(()=> {
-           navigate(location.state)})
-          
-        }else{
-          toast.error("incorrect password")
-        }
-      }
-        }
-         ).catch(er=>[
-            toast.error("email is incorrect")
-         ])
-       }
-  
-getuserData()
+      return;
+    } else {
+      const getuserData = () => {
+        return axios
+          .get(`http://localhost:8080/users/${data.email}`)
+          .then((res) => {
+            if (res.data.email == data.email) {
+              if (res.data.password == data.password) {
+                toast.success("you are successfully logged in");
+                dispatch(login()).then(() => {
+                  navigate(location.state);
+                });
+              } else {
+                toast.error("incorrect password");
+              }
+            }
+          })
+          .catch((er) => [toast.error("email is incorrect")]);
+      };
+      getuserData();
+    }
+    navigate(location.state);
   };
 
   return (
     <>
       <div className="">
-      <ToastContainer />
+        <ToastContainer />
         <div className="w-full p-6 m-auto bg-zinc-400 mt-[7%] rounded-xl shadow-xl lg:max-w-xl">
           <h1 className="text-3xl font-semibold text-center text-orange-700 uppercase">
             Log in
@@ -86,9 +75,10 @@ getuserData()
               >
                 Email
               </label>
-              <input onChange={handleChange}
-              value={data.email}
-              name="email"
+              <input
+                onChange={handleChange}
+                value={data.email}
+                name="email"
                 type="email"
                 className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
               />
@@ -100,9 +90,10 @@ getuserData()
               >
                 Password
               </label>
-              <input onChange={handleChange}
-              name="password"
-              value={data.password}
+              <input
+                onChange={handleChange}
+                name="password"
+                value={data.password}
                 type="password"
                 className="block w-full px-4 py-2 mt-2 text-orange-300 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
               />
@@ -111,7 +102,10 @@ getuserData()
               Forget Password?
             </a>
             <div className="mt-6">
-              <button type="submit" className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-orange-700 rounded-md hover:bg-grey-600 focus:outline-none focus:bg-zinc-600">
+              <button
+                type="submit"
+                className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-orange-700 rounded-md hover:bg-grey-600 focus:outline-none focus:bg-zinc-600"
+              >
                 Login
               </button>
             </div>
@@ -141,7 +135,10 @@ getuserData()
                 <path d="M16 0.396c-8.839 0-16 7.167-16 16 0 7.073 4.584 13.068 10.937 15.183 0.803 0.151 1.093-0.344 1.093-0.772 0-0.38-0.009-1.385-0.015-2.719-4.453 0.964-5.391-2.151-5.391-2.151-0.729-1.844-1.781-2.339-1.781-2.339-1.448-0.989 0.115-0.968 0.115-0.968 1.604 0.109 2.448 1.645 2.448 1.645 1.427 2.448 3.744 1.74 4.661 1.328 0.14-1.031 0.557-1.74 1.011-2.135-3.552-0.401-7.287-1.776-7.287-7.907 0-1.751 0.62-3.177 1.645-4.297-0.177-0.401-0.719-2.031 0.141-4.235 0 0 1.339-0.427 4.4 1.641 1.281-0.355 2.641-0.532 4-0.541 1.36 0.009 2.719 0.187 4 0.541 3.043-2.068 4.381-1.641 4.381-1.641 0.859 2.204 0.317 3.833 0.161 4.235 1.015 1.12 1.635 2.547 1.635 4.297 0 6.145-3.74 7.5-7.296 7.891 0.556 0.479 1.077 1.464 1.077 2.959 0 2.14-0.020 3.864-0.020 4.385 0 0.416 0.28 0.916 1.104 0.755 6.4-2.093 10.979-8.093 10.979-15.156 0-8.833-7.161-16-16-16z"></path>
               </svg>
             </button>
-            <button type="submit" className="flex items-center justify-center w-full p-2 border border-gray-600 rounded-md focus:ring-2 focus:ring-offset-1 focus:ring-violet-600">
+            <button
+              type="submit"
+              className="flex items-center justify-center w-full p-2 border border-gray-600 rounded-md focus:ring-2 focus:ring-offset-1 focus:ring-violet-600"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 32 32"
@@ -152,12 +149,15 @@ getuserData()
             </button>
           </div>
 
-          <p className="mt-8 text-xs font-light text-center text-gray-700">
+          <p className="mt-8 text-sm font-light text-center text-gray-700">
             {" "}
             Don't have an account?{" "}
-            <a href="#" className="font-medium text-orange-300 hover:underline">
+            <Link
+              to="/register"
+              className=" text-orange-500 font-semibold hover:underline"
+            >
               Sign up
-            </a>
+            </Link>
           </p>
         </div>
       </div>
