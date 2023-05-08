@@ -1,8 +1,6 @@
 import React from "react";
-import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
-// import { deleteProduct } from "../../Redux/DataReducer/action";
+
+
 
 
 const Card = ({ id, category, charge, email, first_name, last_name , avatar, handleDelete }) => {

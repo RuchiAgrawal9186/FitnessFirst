@@ -3,7 +3,7 @@ import UserCard from './UserCard'
 import { useDispatch, useSelector } from 'react-redux';
 import Spinner from '../spinner/Spinner';
 import { deleteProduct, getUsers } from '../../Redux/DataReducer/action';
-import { useStatStyles } from '@chakra-ui/react';
+
 
 const Users = () => {
     const dispatch = useDispatch();
@@ -11,7 +11,6 @@ const Users = () => {
     console.log(users)
     const isLoading = useSelector(state=> state.dataReducer.isLoading);
     const [total, setTotal] = useState(0)
-   
 
     useEffect(()=>{
     dispatch(getUsers())
