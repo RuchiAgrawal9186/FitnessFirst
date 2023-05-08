@@ -7,12 +7,13 @@
      display: flex;
      gap: 2rem; 
      color: white;
+     /* border: 2px solid red; */
      cursor: pointer;
 }
-.header-menu>li:hover{
+/* .header-menu>li:hover{
 color: orange;
 cursor: pointer;
-}
+} */
 
 .logo-img{
 width: 16rem;
@@ -38,22 +39,37 @@ background-color: none;
 
 .btn2{
     width: 7rem;
-    height: 2rem;
+    height: 4rem;
+    border: 2px solid white;
     /* cursor: pointer; */
     font-size: large;
     text-transform: uppercase;
-    background-color: var(--orange);
-    border: none;
+    background-color: transparent;
+    /* border: none; */
+    bottom: 1rem;
+    color: white;
+    position: relative;
     font-weight: bold;
+    border-radius: 10px;
+    text-transform: uppercase;
 
 }
 
 .btn2:hover{
-cursor: pointer;
-background-color: white;
-color: var(--orange);
+    cursor: pointer;
+    /* background-color: white; */
+    color: #f48915;
+}
+.header-menu>li{
+    text-transform: uppercase;
+    /* border: 2px solid red; */
+    height: 19px;
 }
 
+.header-menu>li:hover{
+    color: orange;
+    cursor: pointer;
+}
 
 @media screen and (max-width:768px) {
     .header>:nth-child(2){

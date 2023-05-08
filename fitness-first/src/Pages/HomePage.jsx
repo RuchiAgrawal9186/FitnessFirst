@@ -3,6 +3,8 @@ import React from 'react'
 import "../CSS/Homepage.css"
 
 import hero_image from "../assets/hero_image.png"
+// import Black from "../assets/result.png"
+
 import hero_image_back from "../assets/hero_image_back.png"
 import Heart from "../assets/heart.png"
 import Calories from "../assets/calories.png"
@@ -93,10 +95,10 @@ const HomePage = () => {
           {/* hero buttons */}
 
           <div className="hero-buttons">
-            <buttons className="btn">Get Started</buttons>
+            <buttons className="btn3">Get Started</buttons>
 
 
-            <buttons className="btn">Learn More</buttons>
+            <buttons className="btn3">Watch me!</buttons>
           </div>
 
 
@@ -109,7 +111,7 @@ const HomePage = () => {
 
 
         <div className="right">
-          <button className='btn'>join Now</button>
+          {/* <button className='btn'>join Now</button> */}
 
           <motion.div className="heart-rate"
           transition={transition}
