@@ -10,7 +10,7 @@ function Contact() {
           </h1>
         </div>
         {/* contact */}
-        <div className="bg-white py-[12rem] page-padding grid grid-cols-2 container gap-10 items-center md1000:grid-cols-1 ">
+        <div className=" py-[12rem] page-padding grid grid-cols-2 container gap-10 items-center md1000:grid-cols-1 ">
           {/* first col */}
           <div className="md1000:w-[60%] md1000:flex md1000:flex-col md1000:mx-auto min800:w-[90%] min620:w-full">
             <h2 className="text-black text-[36px] font-bold leading-[1.2]">
