@@ -15,7 +15,7 @@ its basically gym web application where user can show the different types or cat
  
 ## Team members
 
-1) Ruchi Agrawal (Team Lead)
+1) Ruchi Agrawal
 2) Ashish nangare
 3) Ankesh kumar
 4) vishal kumar
