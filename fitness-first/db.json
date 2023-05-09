@@ -1,9 +1,36 @@
 {
-  "Products": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
+  "trainers": [
+    
+   
+    { 
+      "id":1,
+      "img": " https://gymate-iota.vercel.app/static/media/trainer1.2b262907a2293e42de47.png", 
+    "name": "John Lewis",
+     "job": "Yoga Trainer" 
+   },
+    { 
+      "id":2,
+      "img": "https://gymate-iota.vercel.app/static/media/trainer2.e1fe210e1c836343c1fe.png", 
+      "name": "Jonathan Doe", 
+      "job": "Crossfit Trainer"
+     },
+    { 
+      "id":3,
+      "img": "https://gymate-iota.vercel.app/static/media/trainer3.8b049fcaa3d9d0a3f143.png",
+     "name": "Ana June",
+      "job": "Personal Trainer"
+     },
+     { 
+      "id":4,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQpE2r6aNJ23gJ8f8yRG-A1KUhzqLFZSH99VIErxfZGw&usqp=CAU&ec=48665699",
+     "name": "Ervin Howell",
+      "job": "Yoga Trainer"
+     },
+     { 
+      "id":5,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDVpXcKMA0uC7KDthOBbzbmgifj2m7TCzQZtYlQmB5Rw&usqp=CAU&ec=48665699",
+     "name": "Leanne Graham",
+      "job": "Personal Trainer"
+     }
   ]
 }

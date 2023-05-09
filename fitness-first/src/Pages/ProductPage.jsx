@@ -81,7 +81,7 @@ import Sidebar from "../components/SideBar"
 const ProductPage = () => {
   return (
     <div style={{textAlign:'center'}}>
-        <h1>Products</h1>
+        <h1 style={{color:"white",fontSize:"30px"}}>Products</h1>
     <DIV>
       
       <div className='sideBar'><Sidebar/></div>

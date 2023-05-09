@@ -68,7 +68,7 @@ setOrder(value)
 
 
  return (
-    <div>
+    <div style={{border:"1px solid white" , color:"white"}}>
       <h3>Filter</h3>
       <div>
         <input
