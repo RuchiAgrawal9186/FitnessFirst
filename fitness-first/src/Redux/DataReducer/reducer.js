@@ -5,6 +5,7 @@ import {
   GET_USER_SUCCESS,
   PRODUCT_FAILURE,
   PRODUCT_REQUEST,
+  PATCH_PRODUCT_SUCCESS
 } from "./actionTypes";
 
 const initialState = {
@@ -31,6 +32,8 @@ export const reducer = (state = initialState, { type, payload }) => {
       return { ...state, isError: false, isLoading: false, users: payload };
     case DELETE_PRODUCT_SUCCESS:
       return { ...state, isLoading: false };
+    case PATCH_PRODUCT_SUCCESS:
+      return {...state, isLoading:false, isError: false, total: state.total+payload }  
     default:
       return state;
   }

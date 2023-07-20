@@ -6,7 +6,8 @@ import {
   REGISTER_SUCCESS,
 } from "./actionTypes";
 
-const USER = `http://localhost:8080/users`;
+const USER = `https://userandtrainer-u0yp.onrender.com/users`;
+
 export const userRegister = (payload) => (dispatch) => {
   // Complete login logic here
   dispatch({ type: REGISTER_SUCCESS });

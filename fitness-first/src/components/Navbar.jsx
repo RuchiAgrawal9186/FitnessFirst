@@ -44,7 +44,7 @@ const Navbar = () => {
   }, [query]);
 
   return (
-    <div className="w-screen h-[80px]  z-10 bg-orange-100 fixed opacity-23">
+    <div className="w-screen h-[80px]  z-10 bg-orange-300 fixed shadow-2xl border-gray-600 border-4 opacity-23">
       <div className="px-2 flex justify-between item-center w-full h-full m-auto">
         <div className="flex items-center w-full mr-4">
           <h2 className="">
@@ -116,47 +116,36 @@ const Navbar = () => {
         }
       >
         <li className="border-b-2 border-gray-300 text-center w-full text-2xl">
-          Home
+        <Link to="/products">Excercise</Link>
         </li>
         <li className="border-b-2 border-gray-300 text-center w-full text-2xl">
-          About
+        <Link to={"/about"}>About</Link>{" "}
         </li>
         <li className="border-b-2 border-gray-300 text-center w-full text-2xl">
-          Support
+        <Link to="/contact">Contact</Link>{" "}
         </li>
         <li className="border-b-2 bordergray-300 text-center w-full text-2xl">
-          Cart
+        <Link to="/bmi">BMI</Link>
         </li>
         <div className="flex flex-col my-4">
-          <button className="mx-7 h-10 text-center my-3">Sign Up</button>
-          <button className="mx-7 h-10 text-center">Login</button>
+        <Link to="/admin">
+            {" "}
+            <button className="mx-7 h-10 text-center my-3">Admin</button>
+          </Link>
+          <Link to="/login">
+            <button
+              onClick={() => dispatch({ type: "TOGGLE" })}
+              className="px-5 h-10  my-5"
+            >
+              {isAuth ? "Logout" : "Login"}
+            </button>
+          </Link>
         </div>
-        <li>
-          <Link to="host/kids">Kids</Link>
-        </li>
-        <li>
-          <Link to="/host/men_shoes">Mens Shooes</Link>
-        </li>
-        <li>
-          <Link to="/host/men_clothes">Men Clothes</Link>
-        </li>
-        <li>
-          <Link to="/host/men_watches">Men Watches</Link>
-        </li>
-        <li>
-          <Link to="/host/sunglasses">Sunglasses</Link>
-        </li>
-        <li>
-          <Link to="/host/women_clothes">Women</Link>
-        </li>
-        <li>
-          <Link to="/host/women_watches">Women Watches</Link>
-        </li>
-      </ul>
+      </ul> 
 
       {name && (
-        <h3 className="bg-zink-400 font-orange-500">
-          Welcom {name} {lastName}. You are our {category} Member
+        <h3 className="bg-zink-400  text-orange-600 font-orange-500">
+          Welcome {name} {lastName}. You are our {category} Member.
         </h3>
       )}
     </div>

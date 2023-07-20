@@ -71,7 +71,7 @@ const Slider = () => {
     <div className='slider_section'>
       <p className='title'> Testimonial</p>
       <h1 className='h1_title' style={{fontSize:"30px",margin:"2%"}}>They are Happy Clients After Joining Us</h1>
-      <Carousel breakPoints={breakPoints}>
+      <Carousel  breakPoints={breakPoints}>
         {
           arr.map((el)=>{
             return <Item key={el.id}>
@@ -79,7 +79,7 @@ const Slider = () => {
               <img src={el.image} alt="altimage" />
               {/* hello */}
               </div>
-              <div className="parag_div">
+              <div className="parag_div flex justify-center items-center">
                 {/* hello */}
               <p className="desc">{el.desc}</p>
               </div>
@@ -90,16 +90,7 @@ const Slider = () => {
           })
         }
          </Carousel>
-      {/* <Carousel breakPoints={breakPoints}>
-          <Item>One</Item>
-          <Item>Two</Item>
-          <Item>Three</Item>
-          <Item>Four</Item>
-          <Item>Five</Item>
-          <Item>Six</Item>
-          <Item>Seven</Item>
-          <Item>Eight</Item>
-        </Carousel> */}
+
     </div>
   )
 }
@@ -114,7 +105,18 @@ const Item = styled.div`
   margin: 0 15px;
   font-size: 4em;
   text-align: center;
-  
+  border-radius:30px;
+ 
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: all .5s ease-in-out;
+    
+    cursor: pointer;
+  &:hover {
+    background-color: #de6610;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transform: scale(1.02);
+    padding: 5px;
+  }
 `;
 
 export default Slider

@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { patchUser } from "../../Redux/DataReducer/action";
 
 
 
 
 const Card = ({ id, category, charge, email, first_name, last_name , avatar, handleDelete }) => {
+  const dispatch = useDispatch()
+
+
   return (
  
       <div class="flex flex-row justify-between items-center bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40">
@@ -26,6 +31,17 @@ const Card = ({ id, category, charge, email, first_name, last_name , avatar, han
        Charge : {charge}
       </div>
         </div>
+        {/* <select
+                  className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                  id="grid-state"
+                  name="category"
+                
+                  value={category}
+                >
+                  <option value={"basic"}>Basic</option>
+                  <option value={"premium"}>Premium</option>
+                  <option value={"pro"}>Pro</option>
+                </select> */}
         
       </div>
     

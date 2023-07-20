@@ -51,16 +51,24 @@
       "password": "12345678"
     },
     {
-      "email": "a@123",
-      "first_name": "Ashish ",
-      "last_name": "NANGARE",
+      "email": "ruchi@gmail.com",
+      "first_name": "ruchi",
+      "last_name": "agrawal",
       "avatar": "https://reqres.in/img/faces/7-image.jpg",
-      "category": "premium",
-      "charge": 30,
-      "password": "aaa",
-      "id": "a@123"
+      "category": "basic",
+      "charge": 25,
+      "password": "1234",
+      "id": "ruchi@gmail.com"
+    },
+    {
+      "email": "abc@gmail.com",
+      "first_name": "abc",
+      "last_name": "xyz",
+      "avatar": "https://reqres.in/img/faces/7-image.jpg",
+      "category": "basic",
+      "charge": 25,
+      "password": "1234",
+      "id": "abc@gmail.com"
     }
-
   ]
-
 }

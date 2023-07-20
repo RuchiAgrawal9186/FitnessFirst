@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 // import { dataContext } from '../context/DatacontextProvider';
 // import { useContext } from 'react';
@@ -13,19 +13,20 @@ import { LOGIN_SUCCESS } from "../Redux/AuthReducer/actionTypes";
 import { userRegister } from "../Redux/AuthReducer/action";
 import axios from "axios";
 
-// const dataContext = React.createContext()
+const USER = `https://userandtrainer-u0yp.onrender.com/users`;
 
 export const Register = () => {
   const authEmail = useSelector((state) => state.authReducer.email);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const location = useLocation();
 
   const [data, setUserData] = useState({
     email: "",
     first_name: "",
     last_name: "",
     avatar: "",
-    avatar: "https://reqres.in/img/faces/7-image.jpg",
+    avatar: `https://reqres.in/img/faces/${Math.ceil(Math.random()*11)}-image.jpg`,
     category: "basic",
     charge: 25,
   });
@@ -58,7 +59,7 @@ export const Register = () => {
       return;
     }
 
-    axios.get(`http://localhost:8080/users/${data.email}`).then((res) => {
+    axios.get(`${USER}/${data.email}`).then((res) => {
       if (res) {
         toast.info("this email id has been previously used");
         return;

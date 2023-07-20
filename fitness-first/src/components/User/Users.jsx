@@ -26,6 +26,23 @@ const Users = () => {
       dispatch(deleteProduct(id)).then(()=>{dispatch(getUsers())})
     }
 
+
+    // const handleChange = (e)=>{
+      
+    //   let value=0
+    //   switch(e.target.value){
+    //     case "pro": value=45;
+    //     break;
+    //     case "premium": value=30;
+    //     break;
+    //     case "basic": value=25;
+    //     break;
+    //     default: value=charge
+    //   }
+    //   console.log(value)
+    
+    //   dispatch(patchUser(id,{category:e.target.value, charge:value})).then(()=>{dispatch(getUsers())})
+    // }
     return (
         <>
         {
