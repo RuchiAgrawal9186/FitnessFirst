@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import axios from "axios";
 import { login } from "../Redux/AuthReducer/action";
+const USER = `https://userandtrainer-u0yp.onrender.com/users`;
 
 const Login = () => {
   const auth = useSelector((state) => state.authReducer.isAuth);
@@ -18,6 +19,7 @@ const Login = () => {
   const dispatch = useDispatch();
 
   const [data, setData] = useState({ email: "", password: "" });
+console.log(location.state)
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -39,26 +41,36 @@ const Login = () => {
     } else {
       const getuserData = () => {
         return axios
-          .get(`http://localhost:8080/users/${data.email}`)
+          .get(`${USER}/${data.email}`)
           .then((res) => {
             if (res.data.email == data.email) {
               if (res.data.password == data.password) {
                 toast.success("you are successfully logged in");
                 dispatch(login()).then(() => {
+                if(location.state){
                   navigate(location.state);
+                }else{
+                  navigate('/products')
+                }  
                 });
               } else {
                 toast.error("incorrect password");
               }
             }
+            // else
+            // {
+            //   toast.error("you are not register user")
+            // }
           })
-          .catch((er) => [toast.error("email is incorrect")]);
+          .catch((er) => [toast.error("you are not register user")]);
       };
       getuserData();
     }
+   
     navigate(location.state);
   };
-
+  
+  
   return (
     <>
       <div className="">

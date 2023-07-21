@@ -44,15 +44,15 @@ const Sidebar = () => {
   };
 
   const handleNext = () => {
-    setPage((p) => p + 1);
+    setPage((p) => +p + 1);
   };
   const handlePrev = () => {
-    setPage((p) => p - 1);
+    setPage((p) => +p - 1);
   };
 
   return (
-    <div className="flex flex-col justify-start items-start pt-4 pl-2 bg-zinc-400 h-full rounded-3xl">
-      <h3>Filter By Category</h3>
+    <div className="flex flex-col justify-start items-start pt-4 pl-2 bg-zinc-400 h-full rounded-3xl m-[auto]">
+      <h3 className="font-semibold">Filter By Category</h3>
       <div>
         <input
           value={"strength"}
@@ -74,7 +74,7 @@ const Sidebar = () => {
       <div>
         <br />
         <br />
-        <h3>Sort By Price</h3>
+        <h3 className="font-semibold">Sort By Price</h3>
       </div>
       <div className="flex flex-col">
         <div onChange={handleOrder}>
@@ -98,11 +98,11 @@ const Sidebar = () => {
           <label htmlFor="desc">descending</label>
         </div>
       </div>
-      <div className="flex">
+      <div className=" flex flex-col md:flex-row mt-6">
         <button disabled={page <= 1} onClick={handlePrev}>
           Prev
         </button>
-        <h3>{page}</h3>
+        <h3 className="m-3">Page: {page}</h3>
         <button disabled={page >= 4} onClick={handleNext}>
           Next
         </button>

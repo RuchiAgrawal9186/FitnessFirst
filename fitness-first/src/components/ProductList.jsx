@@ -16,8 +16,8 @@ const ProductList = () => {
     category: searchParams.getAll("category"),
     _sort: searchParams.get("order") && "price",
     _order: searchParams.get("order"),
-    _page: searchParams.get("page"),
-    _limit: searchParams.get("limit"),
+    _page: searchParams.get("page") || 1,
+    _limit: searchParams.get("limit") || 6,
   };
   useEffect(() => {
     dispatch(getData(params));

@@ -5,15 +5,14 @@ import {
   GET_USER_SUCCESS,
   PRODUCT_FAILURE,
   PRODUCT_REQUEST,
+  PATCH_PRODUCT_SUCCESS
 } from "./actionTypes";
 
 const URL = `https://zara-vej9.onrender.com/gymproducts`;
 
 export const getData = (payload) => (dispatch) => {
-  // Write logic here
-  console.log("getCard");
+
   dispatch({ type: PRODUCT_REQUEST });
-  console.log("getRww");
   axios
     .get(URL, {
       params: payload,
@@ -23,12 +22,29 @@ export const getData = (payload) => (dispatch) => {
       dispatch({ type: GET_PRODUCT_SUCCESS, payload: res.data });
     })
     .catch(() => {
-      console.log("err");
       dispatch({ type: PRODUCT_FAILURE });
     });
 };
 
-const USER = `http://localhost:8080/users`;
+
+
+export const getSingleData = (payload) => (dispatch) => {
+  dispatch({ type: PRODUCT_REQUEST });
+
+  axios
+    .get(`https://zara-vej9.onrender.com/gymproducts/${payload}`)
+    .then((res) => {
+      // console.log(res.data)
+      dispatch({ type: GET_PRODUCT_SUCCESS, payload: res.data });
+    })
+    .catch((err) => {
+      dispatch({ type: PRODUCT_FAILURE });
+    });
+};
+
+
+
+const USER = `https://userandtrainer-u0yp.onrender.com/users`;
 
 export const getUsers = (payload) => (dispatch) => {
   dispatch({ type: PRODUCT_REQUEST });
@@ -49,7 +65,7 @@ export const getUsers = (payload) => (dispatch) => {
 
 export const deleteProduct = (id) => (dispatch) => {
   return axios
-    .delete(`http://localhost:8080/users/${id}`)
+    .delete(`${USER}/${id}`)
     .then((res) => {
       console.log(res.data);
       dispatch({ tpye: DELETE_PRODUCT_SUCCESS });
@@ -59,16 +75,17 @@ export const deleteProduct = (id) => (dispatch) => {
     });
 };
 
-export const getSingleData = (payload) => (dispatch) => {
-  dispatch({ type: PRODUCT_REQUEST });
 
-  axios
-    .get(`https://zara-vej9.onrender.com/gymproducts/${payload}`)
+export const patchUser = (id,data) => (dispatch) => {
+  return axios
+    .patch(`${USER}/${id}`,{data})
     .then((res) => {
-      // console.log(res.data)
-      dispatch({ type: GET_PRODUCT_SUCCESS, payload: res.data });
+      console.log(res.data);
+      dispatch({ tpye: PATCH_PRODUCT_SUCCESS });
     })
     .catch((err) => {
       dispatch({ type: PRODUCT_FAILURE });
     });
 };
+
+
