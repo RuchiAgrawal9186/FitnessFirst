@@ -1,18 +1,18 @@
 import "../index.css";
-
+import "./Contact.css"
 function Contact() {
   return (
     <>
-      <section className="mt-[18%]">
+      <section className="mt-[1%]">
         <div className="login-banner relative justify-center flex">
-          <h1 className="text-white absolute bottom-[25px] text-[3rem] font-bold">
+          <h1 className="text-white absolute mt-[2%] text-[3rem] font-bold">
             Contact Us
           </h1>
         </div>
         {/* contact */}
-        <div className=" py-[12rem] page-padding grid grid-cols-2 container gap-10 items-center md1000:grid-cols-1 ">
-          {/* first col */}
-          <div className="md1000:w-[60%] md1000:flex md1000:flex-col md1000:mx-auto min800:w-[90%] min620:w-full">
+        <div className=" py-[12rem] page-padding grid grid-cols-2 container gap-10 items-center md1000:grid-cols-1 contact">
+          {/* {first col} */}
+          {/* <div className="md1000:w-[60%] md1000:flex md1000:flex-col md1000:mx-auto min800:w-[90%] min620:w-full leftdiv">
             <h2 className="text-black text-[36px] font-bold leading-[1.2]">
               We are here for help you! To Shape Your Body.
             </h2>
@@ -34,7 +34,7 @@ function Contact() {
                 </p>
               </div>
               {/*  */}
-              <div className="flex flex-col relative">
+              {/* <div className="flex flex-col relative">
                 <h3 className="text-[2rem] font-bold mb-10">Opening Hours</h3>
                 <span className="bg-orange-600 w-[50px] h-[4px] absolute top-[33px]"></span>
                 <div className="text-[15px] font-medium text-[#646464]">
@@ -43,16 +43,16 @@ function Contact() {
                 </div>
               </div>
               {/*  */}
-              <div className="flex flex-col relative">
+              {/* <div className="flex flex-col relative">
                 <h3 className="text-[2rem] font-bold mb-10">Information</h3>
                 <span className="bg-orange-600 w-[50px] h-[4px] absolute top-[33px]"></span>
                 <div className="text-[15px] font-medium text-[#646464]">
                   <p>+800-123-4567</p>
                   <p>&nbsp; gymat@gymail.com</p>
                 </div>
-              </div>
+              </div> */} 
               {/*  */}
-              <div className="flex flex-col relative">
+              {/* <div className="flex flex-col relative">
                 <h3 className="text-[2rem] font-bold mb-10">Follow Us On</h3>
                 <span className="bg-orange-600 w-[50px] h-[4px] absolute top-[33px]"></span>
                 <div className="text-[18px] font-medium text-black flex gap-5">
@@ -63,10 +63,14 @@ function Contact() {
                 </div>
               </div>
             </div>
-          </div>
+          </div>  */} 
+
+          {/* className="flex flex-col pt-[30px] pr-[50px] pb-[50px] pl-[45px] bg-[#f8f8f8] relative md1000:w-[100%] md1000:flex md1000:flex-col md1000:mx-auto md1000:mt-14 min800:w-[90%] min620:w-full" */}
+          {/* flex flex-col pt-[30px] pr-[50px] pb-[50px] pl-[45px] bg-[#f8f8f8] relative  md1000:flex md1000:flex-col md1000:mx-auto md1000:mt-14  min620:w-full form-container w-[100%] */}
 
           {/* second col ---*/}
-          <form className="flex flex-col pt-[30px] pr-[50px] pb-[50px] pl-[45px] bg-[#f8f8f8] relative md1000:w-[65%] md1000:flex md1000:flex-col md1000:mx-auto md1000:mt-14 min800:w-[90%] min620:w-full">
+          <div className="rightdiv w-full">
+          <form className="form-container bg-[#f8f8f8] p-[2%] w-full ">
             <h3 className="text-[28px] font-bold mb-14">Leave Us Your Info</h3>
             <span className="bg-orange-600 w-[50px] h-[4px] absolute top-[77px]"></span>
             <input
@@ -102,6 +106,7 @@ function Contact() {
               submit now
             </button>
           </form>
+          </div>
         </div>
 
         {/* map */}
