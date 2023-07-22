@@ -2,9 +2,9 @@
    display: flex;
    width:95%;
    justify-content: space-between;
-   background-color: black;
+   /* background-color: black; */
    color: white;
-   padding: 3%;
+   /* padding: 3%; */
    margin: auto;
    gap:25px
 
@@ -12,8 +12,66 @@
 p{
    color:white
 }
+.sideBar{
+width: 30%;
+/* margin: auto; */
+top:0px;
+flex:1;
+height: 100%;
+}
+.productList{
+ width: 80%;
+ margin: auto;
+ 
+}
 
-.sidebar_div{
+@media screen and (min-width: 512px) and (max-width:1024){
+   .productPage_section{
+      flex-direction: column;
+      justify-content: space-between;
+      /* background-color: black; */
+      color: white;
+      /* padding: 3%; */
+      margin: auto;
+      gap:25px
+   
+   }
+   .sideBar{
+      width: 100%;
+      margin: auto;
+      }
+      .productList{
+         width: 100%;
+         margin: auto;
+        }
+   
+ }
+
+ @media screen and (min-width: 300px) and (max-width:511){
+   .productPage_section{
+      flex-direction: column;
+      justify-content: space-between;
+      /* background-color: black; */
+      color: white;
+      /* padding: 3%; */
+      margin: auto;
+      gap:25px
+   
+   }
+   .sideBar{
+      width: 100%;
+      margin: auto;
+      /* padding: 2%; */
+      }
+      .productList{
+         width: 60%;
+         margin: auto;
+        }
+   
+ }
+
+
+/* .sidebar_div{
    width:20%;
    border: 1px solid white;
    margin:auto
@@ -35,5 +93,5 @@ p{
 .product_div div>img{
     width:100%;
     height:60%;
-}
+} */
 

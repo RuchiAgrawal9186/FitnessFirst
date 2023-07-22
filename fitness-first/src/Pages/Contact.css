@@ -1,0 +1,69 @@
+.contact{
+    width:97%;
+    /* display: flex; */
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+/* .leftdiv{
+    width:50%;
+    margin: auto;
+
+} */
+.rightdiv{
+    width:90%;
+    margin: auto;
+    margin-left: 60%;
+
+}
+.form-container
+{
+    width: 100%;
+}
+
+@media screen and (min-width: 512px) and (max-width:1024){
+    /* .contact{
+        width: 97%;
+        flex-direction: column-reverse;
+        margin: auto;
+    }
+    .leftdiv{
+        width:100%;
+        margin: auto;
+    
+    } */
+    .rightdiv{
+        width:100%;
+        margin: auto;
+        margin-left: 1%;
+    }
+    .form-container
+{
+    width: 100%;
+}
+    
+    
+  }
+ 
+  @media screen and (min-width: 300px) and (max-width:511){
+    /* .contact{
+        width: 97%;
+        flex-direction: column-reverse;
+        margin: auto;
+    }
+    .leftdiv{
+        width:100%;
+        margin: auto;
+    
+    } */
+    .rightdiv{
+        width:100%;
+        margin: auto;
+    }
+    .form-container
+{
+    width: 100%;
+}
+    
+    
+  }
