@@ -13,7 +13,7 @@ const Navbar = () => {
   const [nav, setNav] = useState(false);
   const isAuth = useSelector((state) => state.authReducer.isAuth);
   const name = useSelector((state) => state.authReducer.first_name);
-  console.log(name);
+  // console.log(name);
   const lastName = useSelector((state) => state.authReducer.last_name);
   const category = useSelector((state) => state.authReducer.category);
   const [searchParams] = useSearchParams();

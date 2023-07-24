@@ -16,7 +16,7 @@ const initialState = {
   total: 0,
 };
 export const reducer = (state = initialState, { type, payload }) => {
-  console.log(type);
+  // console.log(type);
   switch (type) {
     case PRODUCT_REQUEST:
       return { ...state, isLoading: true };

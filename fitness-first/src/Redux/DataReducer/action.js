@@ -18,7 +18,7 @@ export const getData = (payload) => (dispatch) => {
       params: payload,
     })
     .then((res) => {
-      console.log(res.data);
+      // console.log(res.data);
       dispatch({ type: GET_PRODUCT_SUCCESS, payload: res.data });
     })
     .catch(() => {
@@ -48,17 +48,17 @@ const USER = `https://userandtrainer-u0yp.onrender.com/users`;
 
 export const getUsers = (payload) => (dispatch) => {
   dispatch({ type: PRODUCT_REQUEST });
-  console.log(payload);
+  // console.log(payload);
   return axios
     .get(USER, {
       params: payload,
     })
     .then((res) => {
-      console.log(res.data);
+      // console.log(res.data);
       dispatch({ type: GET_USER_SUCCESS, payload: res.data });
     })
     .catch(() => {
-      console.log("err");
+      // console.log("err");
       dispatch({ type: PRODUCT_FAILURE });
     });
 };
@@ -67,7 +67,7 @@ export const deleteProduct = (id) => (dispatch) => {
   return axios
     .delete(`${USER}/${id}`)
     .then((res) => {
-      console.log(res.data);
+      // console.log(res.data);
       dispatch({ tpye: DELETE_PRODUCT_SUCCESS });
     })
     .catch((err) => {
@@ -80,7 +80,7 @@ export const patchUser = (id,data) => (dispatch) => {
   return axios
     .patch(`${USER}/${id}`,{data})
     .then((res) => {
-      console.log(res.data);
+      // console.log(res.data);
       dispatch({ tpye: PATCH_PRODUCT_SUCCESS });
     })
     .catch((err) => {
