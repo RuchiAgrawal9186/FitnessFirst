@@ -27,7 +27,7 @@ function BmiCalc() {
 
   return (
     <>
-      <section className="bmi-section py-[6rem] mt-[5%] relative">
+      <section className="bmi-section py-[6rem] mt-[5%] relative pl-10">
         <div className="container page-padding ">
           <span className="w-full h-full absolute bg-transparent min620:bg-[#00000063] top-0 left-0"></span>
           <div className="text-white w-[52rem] min620:w-[100%] relative">

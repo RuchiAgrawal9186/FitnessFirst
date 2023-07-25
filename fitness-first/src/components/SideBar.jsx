@@ -51,7 +51,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-start pt-4 p-1 bg-zinc-400 h-full rounded-3xl m-[auto] ">
+    <div className="flex flex-col justify-center items-start pt-4 p-10 bg-zinc-400 h-full rounded-3xl m-[auto] ">
       <h3 className="font-semibold">Filter By Category</h3>
       <div>
         <input

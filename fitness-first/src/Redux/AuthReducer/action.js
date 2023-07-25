@@ -15,7 +15,7 @@ export const userRegister = (payload) => (dispatch) => {
   return axios
     .post(USER, payload)
     .then((res) => {
-      console.log("postscc");
+      // console.log("postscc");
       dispatch({ type: LOGIN_SUCCESS, payload: payload });
     })
     .catch((err) => {
