@@ -1,17 +1,17 @@
 
 # Fitness First
 
-its basically gym web application where user can show the different types or categories of exrcise also they can join the membership als then can messure the (BMI) Body Mass Index and see the details about the different types of exercises.  
+This gym web application enables users to explore diverse exercise categories. Users can choose to enroll in memberships and calculate their Body Mass Index (BMI). Furthermore, users can access comprehensive information about various exercise types  
 
 ## Installation
 
-1.firstly clone the repository to the local system
+1. First clone the repository to the local system
 
-2.go to your folder and cd/fitness-firstly
+2. Go to your folder and cd/fitness-firstly
 
-3.install all the dependency whih reuire in this project using this command : npm i --legacy-peer-deps
+3. Install all the dependencies required in this project using this command: npm i --legacy-peer-deps
 
-4.run project with npm run start
+4. Run the project with npm run start
  
 ## Team members
 
