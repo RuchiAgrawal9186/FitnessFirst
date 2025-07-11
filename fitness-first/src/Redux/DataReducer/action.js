@@ -8,7 +8,8 @@ import {
   PATCH_PRODUCT_SUCCESS
 } from "./actionTypes";
 
-const URL = `https://zara-vej9.onrender.com/gymproducts`;
+// const URL = `https://zara-vej9.onrender.com/gymproducts`;
+const URL = `https://zarabackend-production.up.railway.app/gymproducts`
 
 export const getData = (payload) => (dispatch) => {
 
@@ -32,7 +33,7 @@ export const getSingleData = (payload) => (dispatch) => {
   dispatch({ type: PRODUCT_REQUEST });
 
   axios
-    .get(`https://zara-vej9.onrender.com/gymproducts/${payload}`)
+    .get(`https://zarabackend-production.up.railway.app/gymproducts/${payload}`)
     .then((res) => {
       // console.log(res.data)
       dispatch({ type: GET_PRODUCT_SUCCESS, payload: res.data });
