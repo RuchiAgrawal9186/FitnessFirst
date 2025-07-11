@@ -12,6 +12,7 @@ import AdminNavbar from './components/User/AdminNavbar';
 
 function App() {
   const adminAuth= useSelector(state=> state.authReducer.isAuthAdmin)
+  
   return (
     <div className="App">
       <Navbar/>
